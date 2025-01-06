@@ -1,0 +1,80 @@
+what is WEBPACK?
+
+React.StrictMode -> during development it will render our components twice in order to make easier to find some bugs.
+
+DECLARATIVE APPROACH -> tell JSX what we want to see on the screen but not how to achieve it step-by-step
+IMPERATIVE -> Need to explain step-by-step how to do it, like using vanilla js on web.
+
+
+React does not give a shit about how we are gonna style. Can use inline style,
+external CSs, SAS files, CSS modules, styled components, Tailwind
+
+style = {{}} -> first {} for js scope, second {} for style object.
+camelCase for css properties.
+
+WEBBACK -> A bunch of configs, one of its reponsabilities is to include file imports inside different classes.
+BABEL -> Transpile JSX into Native REACT and then Native HTML, JS, CSS.
+
+use className instead of class ('cause it's a reserved word in JS).
+
+PROPS are READ-ONLY
+PROPS are data passed from PARENT component to CHILD one, that's why it can't be changed.
+a COMPONENT should NEVER mutate any data that is declared outside of its function scope.
+
+ONE WAY DATA FLOW -> props can only come from parent to child, but never the inverse.
+
+
+-------- RENDER LISTS -----------
+
+- EACH ELEMENT SHOUlD HAVE A KEY;
+
+<React.Fragmento key={anything} >
+<React.Fragmento key={anything} />
+
+---- FORMS is so powerfull (study that)
+
+--- CONTROLED ELEMENTS
+-> WITH FORMS: instead keep the data of each element in the DOM, REACT
+keep it.
+
+DEFINE STATE -> USE STATE ON ELEMENT (VALUE) > UPDATE STATE VARIABLE
+WITH ONCHANGE VARIABLE.
+
+const [description, setDescription] = useState("");
+<input
+    type="text"
+    placeholder="Item..."
+    value={description}
+    onChange={(e) => setDescription(e.target.value)}
+></input>
+
+
+--- STATE
+
+- basically data that a component can hold over time.
+- Whenever a state variable is updated, it triggers react to update component
+
+- HOOKS start with use* e.g useState, useEffect, useReducer.
+- SHOULD be call only on top level of the component.
+
+When there a need to update state, should always do so by passing a callback function
+wrong way: setSomething(s+1);
+correct way: setSomething( (s) => s + 1 )
+
+
+
+------------------------------
+STATE vs PROPS
+- Internal data, owned by a component in which it is declared;
+- State can be updated by the component itself;
+- Used to make components interective
+State is monitored by react, every time a update happens react goes and update the 
+component
+
+- External data from parent to chield
+- Readonly
+- When child recieves updated props, chield also rerenders
+Props can only follow one way path which is from parent to child, neither up nor 
+sideways to another components/
+
+

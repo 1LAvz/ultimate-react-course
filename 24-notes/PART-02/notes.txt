@@ -1,0 +1,11 @@
+- How to split the UI into components?
+
+Pop drilling is when you need to pass state variable deep inside components tree, not a good idea.
+
+Component composition: combining different components using the children prop (or explicity defined props)
+- Creat
+
+proptypes -> an alternative to check for variables types in JavaScript, but is better user TypeScript if that becomes commom.
+import PropTypes from "prop-types";
+
+

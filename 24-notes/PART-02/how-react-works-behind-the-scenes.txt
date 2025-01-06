@@ -1,0 +1,11 @@
+Component;
+Component instance;  (LIFECYCLE?)
+react element
+dom element (html)
+
+
+
+REACT IS just a view library;
+For large scale applications you'll need external libraries as:
+ROUTING, HTTP Request, Styling, Form management and so on.
+

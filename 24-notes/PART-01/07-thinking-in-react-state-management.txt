@@ -1,0 +1,12 @@
+------- STATE MANAGEMENT -------
+
+1 -> Local in the component itself;
+2 -> Pass it through chield component via props;
+3 -> Lift state up to first common parent;
+4 -> use GLOBAL state.
+
+
+----- CHIELD PROP ------
+every react component recieves, the children obj is between opening and closing tags. We can fill it with any JSX.
+Essencial for reusable components.
+word: children
